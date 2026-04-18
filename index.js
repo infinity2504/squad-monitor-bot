@@ -222,5 +222,3 @@ async function main() {
   console.log('✅ Sheet template setup complete!');
 }
 main().catch(err => { console.error(err); process.exit(1); });
-node_modules/
-.env
