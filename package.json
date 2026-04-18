@@ -1,0 +1,15 @@
+{
+  "name": "squad-monitor-bot",
+  "version": "1.0.0",
+  "description": "Discord bot that monitors Squad servers and logs metrics to Google Sheets",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "setup": "node setup-sheet.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.3",
+    "dotenv": "^16.4.7",
+        "googleapis": "^148.0.0"
+  }
+}
