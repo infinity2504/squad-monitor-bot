@@ -4,7 +4,9 @@ const { google } = require('googleapis');
 const fs = require('fs');
 const path = require('path');
 
-const DISCORD_TOKEN = process.env.DISCORD_BOT_TOKEN;
+const DISCORD_TOKEN = (process.env.DISCORD_BOT_TOKEN || '').trim();
+console.log('[DEBUG] Token length:', DISCORD_TOKEN.length, '| first 10:', DISCORD_TOKEN.substring(0, 10));
+console.log('[DEBUG] Raw env length:', (process.env.DISCORD_BOT_TOKEN || '').length);
 const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 const SERVICE_ACCOUNT_PATH = process.env.GOOGLE_SERVICE_ACCOUNT_PATH || path.join(__dirname, '..', '.secrets', 'squad-monitor-gcloud.json');
 const SNAPSHOT_HOUR = parseInt(process.env.SNAPSHOT_HOUR || '23', 10);
